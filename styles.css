@@ -1,4 +1,5 @@
 /* ======================== ESTILOS GENERALES ======================== */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -8,7 +9,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins';
 }
 
 /* Contenedor principal del header */
@@ -66,8 +67,12 @@ body {
     margin-right: 20px;
 }
 
+.logo-portafoliocraft {
+    width: 80px;
+}
+
 .logo {
-    width: 60px;
+    width: 40px;
 }
 
 #menu {
@@ -92,6 +97,7 @@ p {
 }
 
 /* ======================== ESTILOS FORMULARIO CONTACTO ======================== */
+
 .contacto-content {
     max-width: 1170px;
     margin: 0 auto;
@@ -104,22 +110,25 @@ p {
 }
 
 .contenedor-contacto {
-    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
-    background-color: rgb(92, 119, 143);
+    box-shadow: 0 0 20px 0 rgba(13, 83, 187, 0.3);
+    background-color: rgb(140, 174, 204);
 }
 
 .contenedor-contacto > * {
     padding: 1em;
 }
 
-.formulario-contacto form {
+.formulario-contacto form label {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 120px;
+    margin-right: 10px;
 }
 
 .formulario-contacto form p {
-    margin: 0;
-    padding: 1em;
+    margin-bottom: 1.5em;
+    display: flex;
+    align-items: center;
 }
 
 .formulario-contacto form .block {
@@ -135,7 +144,7 @@ p {
     background: none;
     outline: 0;
     color: black;
-    border-bottom: 1px solid #27374D;
+    border-bottom: 1px solid #255ead;
 }
 
 .formulario-contacto form button {
@@ -152,16 +161,30 @@ p {
     outline: 0;
 }
 
+.informacion-contacto {
+    background: #a1bacc;
+    color: #333;
+    padding: 1em;
+}
+
 .formulario-contacto input,
 .formulario-contacto textarea {
     margin-bottom: 1em;
+}
+
+h4 {
+    font-size: 1.17em;
+    align-items: center;
+    justify-content: center;
 }
 
 .informacion-contacto h4,
 .informacion-contacto ul,
 .informacion-contacto p {
     text-align: center;
-    margin: 0 0 1rem 0;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    color: #333;
 }
 
 .informacion-contacto ul {
@@ -170,7 +193,25 @@ p {
 }
 
 .informacion-contacto ul li {
-    padding: 0.3em;
+    padding: 0.5em 0;
+}
+
+.contacto-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: #526D82;
+}
+
+.logo-contactanos {
+    width: 120px;
 }
 
 /* ======================== MEDIA QUERIES ======================== */
@@ -236,5 +277,11 @@ p {
     .informacion-contacto p {
         padding: 1em;
         text-align: left;
+    }
+}
+
+@media (max-width: 700px) {
+    .contenedor-contacto {
+        grid-template-columns: 1fr; 
     }
 }
