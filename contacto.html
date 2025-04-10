@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos Generales CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/4b67d9021d.js" crossorigin="anonymous"></script>
     <title>Contacto</title>
 </head>
 <body>
     <header>
         <div class="content">
             <div class="menu-container">
-                <img id="logo" src="/img/icono-portafoliocraftsvg.svg" alt="logo-portafoliocraft">
+                <img class="logo" src="/img/icono-portafoliocraftsvg.svg" alt="logo-portafoliocraft">
                 <input type="checkbox" id="menu">
                 <nav class="navbar">
-                    <ul> <!-- Menú de navegación -->
+                    <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="servicios.html">Servicios</a></li>
                         <li><a href="comunidad.html">Comunidad</a></li>
@@ -21,16 +24,60 @@
                         <li><a href="contacto.html">Contacto</a></li>
                     </ul>
                 </nav>
-                <div class="img-icons">  <!-- Contenedor de iconos -->
-                    <img id="img-iconos" src="/img/icons8-carrito-de-compras-50.svg" alt="carrito-de-compras">
-                    <img id="img-iconos" src="/img/icons8-cuenta-24.svg" alt="icono-cuenta">
+                <div class="img-icons">
+                    <img class="logo" src="/img/icons8-carrito-de-compras-50.svg" alt="Carrito de compras">
+                    <img class="logo" src="/img/icons8-cuenta-24.svg" alt="Icono cuenta">
                 </div>
             </div>
         </div>
     </header>
-<main>
-    <h1>Contacto</h1>
-    <p>Me puedes contartar aqui 😉</p>
-</main>
+
+    <main>
+        <div class="contacto-content">
+            <h1>Contáctanos</h1>
+            <div class="contenedor-contacto">
+                <div class="formulario-contacto">
+                    <h3>Escríbenos</h3>
+                    <form action="#">
+                        <p>
+                            <label for="full-name">Nombre Completo</label>
+                            <input type="text" name="full-name" id="full-name" required>
+                        </p>
+                        <p>
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" name="email" id="email" required>
+                        </p>
+                        <p>
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+                        </p>
+                        <p>
+                            <label for="affair">Asunto</label>
+                            <input type="text" name="affair" id="affair" required>
+                        </p>
+                        <p class="block">
+                            <label for="message">Mensaje</label>
+                            <textarea name="message" id="message" rows="4" required></textarea>
+                        </p>
+                        <p class="block">
+                            <button type="submit">Enviar</button>
+                        </p>
+                    </form>
+                </div>
+                <div class="informacion-contacto">
+                    <h4>Más información</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> Bogotá, Colombia</li>
+                        <li><i class="fa-solid fa-phone"></i> 333 333 3333</li>
+                        <li><i class="fa-solid fa-envelope"></i> portafoliocraft@gmail.com</li>
+                    </ul>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, odio! Nemo, eum nisi qui ad esse culpa reprehenderit magnam ea vitae.
+                    </p>
+                    <h5>PortafolioCraft.com.co</h5>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
