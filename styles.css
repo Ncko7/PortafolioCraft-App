@@ -8,8 +8,17 @@
     list-style: none;
 }
 
+
+
 body {
     font-family: 'Poppins';
+    background-color: #cfcfee;
+    /*Imagen de fondo*/
+    background: url(/img/stacked-waves-haikei.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 /* Contenedor principal del header */
@@ -95,9 +104,39 @@ p {
     margin-top: 30px;
     font-size: 1.1rem;
 }
+/* ======================== ESTILOS BOTONES ======================== */
+.botones-menu {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin-top: 20px;
+}
+.boton-servicios, 
+.boton-contactanos, 
+.boton-index,
+.boton-sobrenosotros,
+.boton-comunidad {
+    background-color: #526D82;
+    color: #c3c9d1;
+    border: 2px solid #9DB2BF;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+    transition: background 0.3s, color 0.3s;
+}
 
-/* ======================== ESTILOS FORMULARIO CONTACTO ======================== */
+.boton-servicios:hover, 
+.boton-contactanos:hover, 
+.boton-index:hover,
+.boton-sobrenosotros:hover,
+.boton-comunidad:hover {
+    background-color: #9DB2BF;
+    color: rgb(20, 19, 19);
+}
 
+/* ======================== ESTILOS FORMULARIO CONTACTO ========================*/
 .contacto-content {
     max-width: 1170px;
     margin: 0 auto;
