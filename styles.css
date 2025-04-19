@@ -16,6 +16,9 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Estilos para el header */
@@ -27,6 +30,8 @@ header {
     z-index: 100; 
     background: #9DB2BF; 
 }
+
+
 
 /* Contenedor principal del header */
 .content {
@@ -95,17 +100,15 @@ header {
     display: none;
 }
 
-main {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding-top: 74px;
-}
+
 
 h1 {
     margin-top: 60px;
     font-size: 2.5rem;
     font-weight: bold;
+    padding-top: 72px;
+    padding-bottom: 16px;
+    text-align: center;
 }
 
 p {
@@ -212,6 +215,7 @@ p {
     background: #a1bacc;
     color: #333;
     padding: 1em;
+    text-align: center;
 }
 
 .formulario-contacto input,
@@ -259,7 +263,14 @@ a:hover {
 
 .logo-contactanos {
     width: 120px;
+    display: block;
+    margin: 0 auto;
 }
+.contacto-texto {
+    padding: 1em;
+    text-align: center;
+}
+
 .boton-enviar {
     border-radius: 12px;
     font-family: 'Poppins';
@@ -432,9 +443,9 @@ a:hover {
 
 /* ======================== SECCIÓN FOOTER ======================== */
 
-.footer {
+footer {
     position: relative;
-    bottom: 0;
+    bottom: -90px;
     left: 0;
     width: 100%;
     background: #B9C5DF;
