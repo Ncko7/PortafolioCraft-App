@@ -7,6 +7,10 @@
     list-style: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins';
     background-color: #cfcfee;
@@ -109,171 +113,6 @@ h1 {
     padding-top: 72px;
     padding-bottom: 16px;
     text-align: center;
-}
-
-p {
-    margin-top: 30px;
-    font-size: 1.1rem;
-}
-/* ======================== ESTILOS BOTONES ======================== */
-.botones-menu {
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    margin-top: 20px;
-}
-.boton-servicios, 
-.boton-contactanos, 
-.boton-index,
-.boton-sobrenosotros,
-.boton-comunidad {
-    background-color: #526D82;
-    color: #c3c9d1;
-    border: 2px solid #9DB2BF;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 10px;
-    transition: background 0.3s, color 0.3s;
-}
-
-.boton-servicios:hover, 
-.boton-contactanos:hover, 
-.boton-index:hover,
-.boton-sobrenosotros:hover,
-.boton-comunidad:hover {
-    background-color: #9DB2BF;
-    color: rgb(20, 19, 19);
-}
-
-/* ======================== ESTILOS FORMULARIO CONTACTO ========================*/
-.contacto-content {
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 1.5em;
-}
-
-.logo {
-    text-align: center;
-    font-size: 3em;
-}
-
-.contenedor-contacto {
-    box-shadow: 0 0 20px 0 rgba(13, 83, 187, 0.3);
-    background-color: rgb(140, 174, 204);
-}
-
-.contenedor-contacto > * {
-    padding: 1em;
-}
-
-.formulario-contacto form label {
-    display: grid;
-    align-items: center;
-    width: 120px;
-    margin-right: 10px;
-}
-
-.formulario-contacto form p {
-    margin-bottom: 1.5em;
-    display: flex;
-    align-items: center;
-}
-
-.formulario-contacto form .block {
-    grid-column: 1 / 3;
-}
-
-.formulario-contacto form button,
-.formulario-contacto form input,
-.formulario-contacto form textarea {
-    width: 100%;
-    padding: 0.7em;
-    border: none;
-    background: none;
-    outline: 0;
-    color: black;
-    border-bottom: 1px solid #526D82;
-}
-
-.formulario-contacto form button {
-    background: #9DB2BF;
-    text-transform: uppercase;
-    padding: 1em;
-}
-
-.formulario-contacto form button:hover,
-.formulario-contacto form button:focus {
-    background: #27374D;
-    color: aliceblue;
-    transition: background-color 1s ease-out;
-    outline: 0;
-}
-
-.informacion-contacto {
-    background: #a1bacc;
-    color: #333;
-    padding: 1em;
-    text-align: center;
-}
-
-.formulario-contacto input,
-.formulario-contacto textarea {
-    margin-bottom: 1em;
-}
-
-h4 {
-    font-size: 1.17em;
-    align-items: center;
-    justify-content: center;
-}
-
-.informacion-contacto h4,
-.informacion-contacto ul,
-.informacion-contacto p {
-    text-align: center;
-    margin-bottom: 0.5em;
-    padding: 0.5em;
-    color: #333;
-}
-
-.informacion-contacto ul {
-    list-style: none;
-    padding: 0;
-}
-
-.informacion-contacto ul li {
-    padding: 0.5em 0;
-}
-
-.contacto-info-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-}
-
-a {
-    color: white;
-}
-
-a:hover {
-    color: #526D82;
-}
-
-.logo-contactanos {
-    width: 120px;
-    display: block;
-    margin: 0 auto;
-}
-.contacto-texto {
-    padding: 1em;
-    text-align: center;
-}
-
-.boton-enviar {
-    border-radius: 12px;
-    font-family: 'Poppins';
 }
 
 /* ======================== SECCIÓN PORTADA ======================== */
@@ -441,6 +280,466 @@ a:hover {
     100%  { margin-left: 0%; }      
 }
 
+
+/* ======================== ESTILOS BOTONES ======================== */
+.botones-menu {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin-top: 20px;
+}
+.boton-servicios, 
+.boton-contactanos, 
+.boton-index,
+.boton-sobrenosotros,
+.boton-comunidad {
+    background-color: #526D82;
+    color: #c3c9d1;
+    border: 2px solid #9DB2BF;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.boton-servicios:hover, 
+.boton-contactanos:hover, 
+.boton-index:hover,
+.boton-sobrenosotros:hover,
+.boton-comunidad:hover {
+    background-color: #9DB2BF;
+    color: rgb(20, 19, 19);
+}
+
+/* ======================== ESTILOS FORMULARIO CONTACTO ========================*/
+.contacto-content {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 1.5em;
+}
+
+.logo {
+    text-align: center;
+    font-size: 3em;
+}
+.formulario-contacto h3 {
+    text-align: center;
+    margin-bottom: 0.5em;
+    padding: 0.5em
+}
+
+.contenedor-contacto {
+    box-shadow: 0 0 20px 0 rgba(13, 83, 187, 0.3);
+    background-color: rgb(137, 166, 192);
+}
+
+.contenedor-contacto > * {
+    padding: 1em;
+}
+
+.formulario-contacto form label {
+    display: grid;
+    align-items: center;
+    width: 120px;
+    margin-right: 10px;
+}
+
+.formulario-contacto form p {
+    margin-bottom: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+.formulario-contacto form .block {
+    grid-column: 1 / 3;
+}
+
+.formulario-contacto form button,
+.formulario-contacto form input,
+.formulario-contacto form textarea {
+    width: 100%;
+    padding: 0.7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: black;
+    border-bottom: 1px solid #526D82;
+}
+
+.formulario-contacto form button {
+    background: #9DB2BF;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.formulario-contacto form button:hover,
+.formulario-contacto form button:focus {
+    background: #27374D;
+    color: aliceblue;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+.informacion-contacto {
+    background: #a1bacc;
+    color: #333;
+    padding: 1em;
+    text-align: center;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    margin-bottom: 1em;
+}
+
+h4 {
+    font-size: 1.17em;
+    align-items: center;
+    justify-content: center;
+}
+
+.informacion-contacto h4,
+.informacion-contacto ul,
+.informacion-contacto p {
+    text-align: center;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    color: #333;
+}
+
+.informacion-contacto ul {
+    list-style: none;
+    padding: 0;
+}
+
+.informacion-contacto ul li {
+    padding: 0.5em 0;
+}
+
+.contacto-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: #526D82;
+}
+
+.logo-contactanos {
+    width: 120px;
+    display: block;
+    margin: 0 auto;
+}
+.contacto-texto {
+    padding: 1em;
+    text-align: center;
+}
+
+.boton-enviar {
+    border-radius: 12px;
+    font-family: 'Poppins';
+}
+
+/* ======= SECCIÓN SOBRE NOSOTROS =========== */
+.about-us {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us .section-content img{
+    width: 622px;
+    max-width: 100%;
+    height: auto;
+    padding: 0 10px;
+}
+
+.all-text {
+    width: 600px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+.section-content {
+    width: 1290px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.all-text h4 {
+    font-family: 'Robot' sans-serif;
+    font-size: 18px;
+    color: #777777;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.all-text h2 {
+    font-size: 65px;
+    color: #111111;
+    font-weight: 700px;
+    margin-bottom: 20px;
+}
+
+.all-text p {
+    font-family: 'Robot' sans-serif;
+    font-size: 16px;
+    color: #302c2c;
+    line-height: 30px;
+    margin-bottom: 35px;
+}
+
+.btn button {
+    background: #777777;
+    padding: 20px 32px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #f0f0f0;
+    border: none;
+    outline: none;
+    box-shadow: 0px 16px 32px 0px rgb(0 0 0 / 6%);
+    margin-right: 20px;
+     border-radius: 15px;
+}
+
+.btn button:hover {
+    background-color: #9DB2BF;
+    color: rgb(20, 19, 19);
+    transition: .5s;
+    cursor: pointer;
+}
+.btn .btn2 {
+    background-color: #585858;
+    color: white;
+}
+
+/* ======= SECCIÓN NUESTRO EQUIPO =========== */
+.meet-our-team {
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+}
+.team-intro {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+.team-intro h2 {
+    font-size: 3rem;
+    color: #111;
+    margin-bottom: 20px;
+}
+.team-intro p {
+    font-size: 1.1rem;
+    color: #302c2c;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+.team-member {
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0,3s ease;
+    background: #a8adb4;
+    cursor: pointer;
+}
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    background: #979aa0;
+}
+.team-member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.team-member h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.team-member span {
+    font-size: 0.9rem;
+    color: #757575;
+    margin-bottom: 15px;
+}
+.about-us-team {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+}
+.team-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+.team-intro-left {
+    flex: 1;
+    text-align: left;
+}
+.team-intro-left h2 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+.team-intro-left p {
+    font-size: 1rem;
+    color: #757575;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* ======= SECCIÓN PREGUNTAS FRECUENTES =========== */
+.faq-section {
+    padding: 80px 40px;
+    text-align: center;
+    
+}
+
+.faq-title {
+    font-size: 3rem;
+    color: #111;
+    margin-bottom: 40px;
+}
+
+.faq-item {
+    margin-bottom: 30px;
+    text-align: left;
+    padding: 20px;
+    border-left: 4px solid #7c7b97;
+    background-color: transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.faq-item h4 {
+    font-size: 1.3rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.faq-item:hover {
+    background-color: #c1c1ca;
+    border-left-color: #55547c;
+}
+
+.cta-faq {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: #a9b1bda4;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.cta-faq h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.cta-faq p {
+    font-size: 1rem;
+    color: #2b2a2a;
+    margin-bottom: 20px;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: #585858;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #9DB2BF;
+    color: rgb(20, 19, 19);
+    transition: .5s;
+    cursor: pointer;
+}
+
+
+
+
+/* ======= MEDIA QUERRYS PARA PANTALLAS PEQUEÑAS =======  */
+@media (max-width: 768px) {
+    .meet-our-team {
+        flex-direction: column; /* Apilar la introducción y la cuadrícula */
+        text-align: center; /* Centrar la introducción */
+    }
+
+    .team-intro {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ajustar las columnas en pantallas pequeñas */
+    }
+    .meet-our-team {
+        flex-direction: column;
+        text-align: center;
+    }
+    .team-intro {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .team-intro-left {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+
+
 /* ======================== SECCIÓN FOOTER ======================== */
 
 footer {
@@ -596,5 +895,29 @@ footer {
     }
     .texto p {
         font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 60px 0;
+
+    }
+    .all-text {
+        text-align: center;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .about-us .main img {
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+    .all-text h2 {
+        font-size: 45px;
+        margin-bottom: 20px;
     }
 }
