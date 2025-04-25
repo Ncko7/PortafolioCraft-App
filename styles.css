@@ -6,6 +6,7 @@
     text-decoration: none;
     list-style: none;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -63,6 +64,62 @@ header {
 .navbar {
     display: flex;
     align-items: center;
+}
+
+/* Estilo para el menú desplegable */
+.navbar ul li .drop-down {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #9DB2BF;
+    padding: 10px 0;
+    min-width: 200px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 200;
+}
+
+/* Estilo para cada ítem del menú desplegable */
+.navbar ul li .drop-down li {
+    padding: 10px 20px;
+    white-space: nowrap;
+    color: aliceblue;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover para ítems del menú */
+.navbar ul li .drop-down li:hover {
+    background-color: #526D82;
+}
+
+/* Mostrar el menú al pasar el mouse o al enfocarlo */
+.navbar ul li.nav-link:hover .drop-down,
+.navbar ul li.nav-link:focus-within .drop-down {
+    display: flex;
+}
+
+/* Asegura que SOLO el icono hacia abajo se vea por defecto */
+.navbar ul li.nav-link .icon-up {
+    display: none;
+}
+
+.navbar ul li.nav-link .icon-down {
+    display: inline-block;
+}
+
+/* Al hacer hover o focus: intercambiamos visibilidad */
+.navbar ul li.nav-link:hover .icon-down,
+.navbar ul li.nav-link:focus-within .icon-down {
+    display: none;
+}
+
+.navbar ul li.nav-link:hover .icon-up,
+.navbar ul li.nav-link:focus-within .icon-up {
+    display: inline-block;
 }
 
 /* Lista de navegación */
@@ -385,7 +442,7 @@ a:hover {
     border-radius: 12px;
     font-family: 'Poppins';
 }
-/* ======================== ESTILOS FORMULARIO REGISTRO ======================== */
+/* ================= ESTILOS FORMULARIO REGISTRO====================== */
 .login-container {
     position: relative;
     display: flex;
@@ -504,6 +561,84 @@ button {
 button:hover {
     background-color: #0f172a;
 }
+
+/* ======================== SECCIÓN SERVICIOS ======================== */
+.servicios-grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 120px auto;
+}
+
+.servicio.card {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(33.33% - 60px);
+    min-height: 250px;
+    min-width: 300px;
+    gap: 20px;
+    min-height: auto;
+}
+
+.servicios-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1; 
+}
+
+.servicio-card img {
+    width: 80px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.servicios-info h3 {
+    color: #333;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 1.2em
+}
+
+.servicio-info div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+.btn-more-info {
+    display: inline-flex; 
+    align-items: center;
+    color: #fff;
+    background: #777777; 
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.btn-more-info:hover {
+    background-color: #7c8992;
+    color: rgb(20, 19, 19);
+    transition: .5s;
+    cursor: pointer;
+}
+
+
+
 
 
 /* ======= SECCIÓN SOBRE NOSOTROS =========== */
@@ -974,5 +1109,13 @@ footer {
     .all-text h2 {
       font-size: 45px;
       margin-bottom: 20px;
+    }
+    .servicios-grid {
+        flex-direction: column; 
+    }
+
+    .servicio-card {
+        width: 100%; 
+        min-height: auto; 
     }
   }
